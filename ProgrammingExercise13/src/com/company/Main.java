@@ -11,16 +11,16 @@ public class Main {
         int searchValue = 8;
         int positionX = -1;
         int positionY = -1;
+        System.out.print("results: ");
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list[i].length; j++) {
                 if (list[i][j] == searchValue) {
                     positionX = i;
                     positionY = j;
-                    if (positionX == -1 || positionY == -1) {
-                        System.out.println("This number is not present in the array.");
+                    if (positionX == -1) {
+                        System.out.print("None");
                     } else {
-                        System.out.println("Value " + searchValue + " found at: " +
-                                "(" + positionY + "," + positionX + ")");
+                        System.out.print("(" + positionY + "," + positionX + ");");
                     }
 
                 }
